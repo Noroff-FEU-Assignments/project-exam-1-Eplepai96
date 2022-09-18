@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Forum&family=Work+Sans&display=swap');
+
+
+/* Global styles */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-color: #285939;
+    --secondary-color: white;
+    --header-font: 'Forum', serif;
+    --paragraph-font: 20px 'Work Sans', sans-serif;
+    --large-web-font: 40px;
+    --medium-web-font: 30px;
+    --regular-web-font: 20px;
+    --large-phone-font: 30px;
+    --meduim-phone-font: 24px;
+    --regular-phone-font: 18px;
+}
+
+h1, h2, h3, nav ul {
+    font-family: var(--header-font);
+}
+
+p {
+    font: var(--paragraph-font) var(--regular-phone-font);
+}
+
+li {
+    list-style: none;
+} 
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* Header */
+
+nav li:nth-child(4) {
+    display: none;
+}
+
+nav ul {
+    display: flex;
+    margin-top: -4px;
+}
+
+nav li {
+    display: block;
+    text-align: center;
+    padding: 10px 5px;
+    background-color: var(--main-color);
+    color: var(--secondary-color);
+    border: solid 1px var(--secondary-color);
+    border-radius: 2px;
+    width: 100%;
+}
+
+nav li:hover {
+    background-color: rgb(11, 49, 11);
+}
+
+
+
+/* Footer */
+
+footer {
+    background-color: var(--main-color);
+    padding: 20px;
+}
+
+footer p, footer a {
+    margin: 10px 0px;
+    color: var(--secondary-color);
+}
+
+.follow-items {
+    display: flex;
+}
+
+.follow-items li {
+    margin-right: 15px;
+}
+
+
+/* Homepage */
+.intro-text {
+    padding: 20px;
+}
+
+.intro-text h1, .searchfield {
+    text-align: center;
+    margin: 20px 0px 10px;
+}
+
+.search-button {
+    background-color: var(--main-color);
+    color:var(--secondary-color);
+    border: none;
+}
+
+.searchbar {
+    height: 30px;
+}
+
+.posts h2 {
+    text-align: center;
+    margin: 40px 0px 20px;
+}
+
+.carousel {
+    width: 100vw;
+    position: relative;
+    display: flex;
+}
+
+.carousel-items {
+    display: block;
+    margin: 5px;
+}
+
+.posts-container h3 {
+    font-size: var(--medium-phone-font);
+}
+
+.top-image {
+    width: 100%;
+}
+
+.post-image {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    display: flex;
+}
+
+/* Posts page */
+
+.all-posts {
+    display: inline-block;
+    margin: 10px;
+    width: auto;
+    align-items: center;
+}
+
+.all-posts:last-child {
+    justify-content: left;
+}
+
+.posts-container {
+    text-align: center;
+}
+
+.all-posts h3, .all-posts a p {
+    text-align: left;
+}
