@@ -134,8 +134,8 @@ footer p, footer a {
 }
 
 .post-image {
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
     object-fit: cover;
     display: flex;
 }
@@ -145,18 +145,15 @@ footer p, footer a {
 .all-posts {
     display: inline-block;
     margin: 10px;
-    width: auto;
+    max-width: 250px;
     align-items: center;
-}
-
-.all-posts:last-child {
-    justify-content: left;
 }
 
 .posts-container {
     text-align: center;
 }
 
-.all-posts h3, .all-posts a p {
+.all-posts h3 {
     text-align: left;
 }
+
