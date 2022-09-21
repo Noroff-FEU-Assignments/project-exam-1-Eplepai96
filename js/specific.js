@@ -12,11 +12,8 @@ console.log(id);
 
 const baseUrl = "http://soppsankingno.local/wp-json/wp/v2/posts/"
 
-const url = "http://soppsankingno.local/wp-json/wp/v2/posts?" + id;
+const url = "http://soppsankingno.local/wp-json/wp/v2/posts/" + id + "?_embed";
 
-// const productImage = url + "wp_get_attachment_image_src";
-
-// console.log(productImage)
 
 console.log(url);
 
@@ -27,9 +24,15 @@ async function fetchPost() {
         const post = await response.json();
 
         console.log(post);
-
-        createHtml(post);
       
+        function createHtml() {
+            postContainer.innerHTML += `<div>
+                                        <h1>${post.title.rendered}</h1>
+                                        <p>${post.content.rendered}                               
+                                        </div>`
+                                    }
+        
+        createHtml(post);
     }
     catch(error) {
         console.log(error);
@@ -39,16 +42,3 @@ async function fetchPost() {
 
 fetchPost(url);
 
-function createHtml(post) {
-    postContainer.innerHTML += `<div>
-                                <h1>${post.title}</h1>
-                                <div class="post-image" style="background-image:url(${post.media})"></div>
-                                <div class="post-price"> Price: ${post.excerpt.rendered}</div>
-                                <div class="post-description"> ${post.content.rendered}</div>
-                                </div>`
-                                ;
-
-                                console.log(post)
-                            }
-
-createHtml();
