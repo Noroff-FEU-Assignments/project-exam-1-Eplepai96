@@ -8,11 +8,12 @@
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <script src="https://kit.fontawesome.com/da4fbc451d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
 
     <div>
-        <img src="" alt="logo">
+        <img src="images/Asset 1.png" alt="logo">
         <img src="images/Project exam main image.jpg" alt="forskjellige typer sopp" class="top-image">
     </div>
     
@@ -23,6 +24,13 @@
                 <li><a href="posts.html">Poster</a></li>
                 <li><a href="about.html">Om bloggen</a></li>
                 <li><a href="contact.html">Ta kontakt</a></li>
+                <li><div class="searchfield">
+                    <input class="searchbar" type="search" placeholder="Søk i poster..">
+                    <button class="search-button" type="submit"><span class="material-symbols-outlined">
+                        search
+                        </span>
+                    </button>
+                </li>
             </ul>
         </nav>
     </header>
@@ -30,7 +38,6 @@
     <div class="intro-text">
         <h1>Velkommen!</h1>
         <p>Velkommen til min blogg om norsk sopp. Her kan du lese kort om flere typer sopp, samt annen informasjon om sopp du kanskje finner interessant. </p>
-        <br> 
         <p>Bloggen er ment for deg som ønsker å lære, men er ikke en soppkontroll. Sopp som skal spises skal alltid kontrolleres av soppsakkyndig.</p>
     </div>
     
@@ -40,9 +47,17 @@
             search
             </span></button>
     </div>
-        <div class="posts">
-        <h2>Nyeste innlegg</h2>
-        <div class="carousel"></div>
+
+    <h2 class="h2-home">Nyeste innlegg</h2>
+    <div class="posts">
+        
+        <span class="material-symbols-outlined" id="previous-btn">
+            navigate_next
+            </span>
+        <div class="carousel-container"></div>
+        <span class="material-symbols-outlined" id="next-btn">
+            navigate_next
+            </span>
     </div>
     
     <footer>

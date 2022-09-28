@@ -1,9 +1,12 @@
-const carousel = document.querySelector('.carousel');
+const carouselContainer = document.querySelector('.carousel-container');
 
 const baseUrl = "http://soppsankingno.local/wp-json/wp/v2/posts?page=1&_embed"
 
-
 const url = "http://soppsankingno.local/wp-json/wp/v2/posts?page=1&_embed";
+
+
+/* Fetch url */
+
 async function fetchPosts() {
   try {
     const response = await fetch(url);
@@ -15,25 +18,8 @@ async function fetchPosts() {
 
 fetchPosts()
 
-// async function getPosts(url) {
-//     const response = await fetch(url);
-//     const posts = await response.json();
-//     console.log(response.body)
 
-    
-
-//     posts.forEach(function(post){
-//         carousel.innerHTML += `<div><a href="posts.html?id=${post.id}"
-//                                 <h3>${post.title.rendered}</h3>
-//                                 <p class="slug">${post.slug}</p> 
-//                                 <img class="post-image" src="${post._embedded?.["wp:featuredmedia"][0].source_url}"/></div></a></div>`
-                                
-//     })
-// }
-
-
-
-
+/* Create posts */
 
 async function getPosts(url) {
     const response = await fetch(url);
@@ -43,13 +29,35 @@ async function getPosts(url) {
 
 
     posts.forEach(function(post){
-        carousel.innerHTML += `<div class="carousel-items">
-                                <h3>${post.title.rendered}</h3>
+        carouselContainer.innerHTML += `<div class="carousel-items">
                                 <img class="post-image" src="${post._embedded?.["wp:featuredmedia"]?.[0].source_url}" />
-                                <a href="specific.html?id=${post.id}"<p>Les mer</p></a>
+                                <h3 class="post-title">${post.title.rendered}</h3>
+                                <a href="specific.html?id=${post.id}"<p class="read-more-btn">Les mer</p></a>
                                 </div>`;
 
     });
 }
 
-getPosts(baseUrl)
+getPosts(baseUrl);
+
+
+
+/* Carousel functionality */
+
+const nextButton = document.querySelector("#next-btn");
+const previousButton = document.querySelector("#previous-btn");
+
+const gap = 520;
+
+let width = carouselContainer.offsetWidth;
+
+function nextSlide() {
+  carouselContainer.scrollBy(width + gap, 0);
+}
+
+function previousSlide() {
+  carouselContainer.scrollBy(-(width + gap), 0);
+}
+
+nextButton.addEventListener("click", nextSlide)
+previousButton.addEventListener("click", previousSlide)

@@ -7,7 +7,6 @@ const params = new URLSearchParams(queryString);
 const id = params.get("id");
 
 
-
 console.log(id);
 
 const baseUrl = "http://soppsankingno.local/wp-json/wp/v2/posts/"
@@ -28,7 +27,8 @@ async function fetchPost() {
         function createHtml() {
             postContainer.innerHTML += `<div>
                                         <h1>${post.title.rendered}</h1>
-                                        <p>${post.content.rendered}                               
+                                        <img class="specific-post-image" src="${post._embedded?.["wp:featuredmedia"]?.[0].source_url}" />
+                                        <p class="post-content">${post.content.rendered}</p>                               
                                         </div>`
                                     }
         
@@ -42,3 +42,11 @@ async function fetchPost() {
 
 fetchPost(url);
 
+const postImage = document.querySelector("specific-post-image")
+
+function enlargeImage(){
+    console.log(23)
+    document.postImage.style.color = "blue";
+}
+
+postImage.addEventListener("click", enlargeImage);

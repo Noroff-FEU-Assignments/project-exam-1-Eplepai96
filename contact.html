@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src="https://kit.fontawesome.com/da4fbc451d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <div>
+        <img src="images/Asset 1.png" alt="logo">
+        <img src="images/Project exam main image.jpg" alt="forskjellige typer sopp" class="top-image">
+    </div>
+    
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Hovedside</a></li>
+                <li><a href="posts.html">Poster</a></li>
+                <li><a href="about.html">Om bloggen</a></li>
+                <li><a href="contact.html">Ta kontakt</a></li>
+                <li><div class="searchfield">
+                    <input class="searchbar" type="search" placeholder="Søk i poster..">
+                    <button class="search-button" type="submit"><span class="material-symbols-outlined">
+                        search
+                        </span>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Kontakt oss</h1>
+        <div class="contact-form">
+            <form>
+                <div>
+                    <label>
+                        <p>Navn</p> 
+                        <input name="name" id="name" />
+                    </label>
+                    <div class="error" id="name-error">Navn må være minst 5 karakterer</div>
+                </div>
+    
+                <div>
+                    <label>
+                        <p>Epost</p>
+                        <input name="email" id="email" />
+                    </label>
+                    <div class="error" id="email-error">Ikke godkjent epost</div>
+                </div>
+    
+                <div>
+                    <label>
+                        <p>Tema</p>
+                        <input name="subject" id="subject" />
+                    </label>
+                    <div class="error" id="subject-error">Må være minst 15 karakterer</div>
+                </div>
+    
+                <div>
+                    <label>
+                        <p>Melding</p> 
+                        <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                    </label>
+                    <div class="error" id="message-error">Må være minst 25 karakterer 25</div>
+                </div>
+    
+                <button>Send</button>
+            </form>
+        </div>
+
+        <article class="contact-info">
+            <h2>Informasjon</h2>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore nam quibusdam saepe eum, nesciunt dignissimos repellat culpa! Iste, provident quas quam incidunt at unde quibusdam deleniti ut ex dicta sapiente impedit distinctio doloremque voluptatibus ea expedita consectetur nostrum minima quo quae. Odit veritatis laudantium commodi, doloribus deserunt tempora optio eligendi.</p>
+            <p>Denne bloggen er et skoleprosjekt, og skal ikke brukes til bestemmelse av sopp. Dersom du har spist sopp du ikke vet hva er, eller opplever symptomer, ta kontakt med Giftinformasjonen.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores facilis praesentium rerum cum. Ducimus ullam, cupiditate sequi excepturi rem dolores ipsam, quam perferendis expedita eligendi repudiandae modi ipsa libero velit!</p>
+        </article>
+
+        <div class="background-info">
+            <div class="info-giftinformasjonen">
+                <h3>Giftinformasjonen</h3>
+                <h4>Ring giftinformasjonen</h4>
+                <a href="tel: +4722591300">22 59 13 00</a>
+                <h4>Send email (ikke akutt)</h4>
+                <a href="mailto: giftinformasjonen@fhi.no">giftinformasjonen@fhi.no</a>
+            </div>
+    
+            <div class="info-sykehus">
+                <h3>Ambulanse</h3>
+                <h4>Ring ambulanse</h4>
+                <a href="tel: +47113">113</a>
+            </div>
+    
+            <div class="info-images">
+                <div class="info-hvit-fluesopp"></div>
+                <div class="info-grønn-fluesopp"></div>
+                <div class="info-spiss-giftslørsopp"></div>
+                <div class="info-butt-giftslørsopp"></div>
+            </div>
+        </div>
+        
+        
+    </main>
+
+    <footer>
+        <a href="contact.html">Kontakt oss</a>
+        <p>Følg oss</p>
+        <ul class="follow-items">
+            <li><i class="fa fa-facebook"></i></li>
+            <li><i class="fa fa-instagram"></i></li>
+            <li><i class="fa fa-twitter"></i></li>
+        </ul>
+    </footer>
+
+    <script src="js/contact.js"></script>
+
+    </body>
+</html>
