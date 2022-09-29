@@ -21,7 +21,7 @@ fetchPosts()
 
 /* Create posts */
 
-async function getPosts(url) {
+async function getPosts() {
     const response = await fetch(url);
     const posts = await response.json();
     console.log(response.body)
@@ -47,7 +47,7 @@ getPosts(baseUrl);
 const nextButton = document.querySelector("#next-btn");
 const previousButton = document.querySelector("#previous-btn");
 
-const gap = 520;
+const gap = 780;
 
 let width = carouselContainer.offsetWidth;
 

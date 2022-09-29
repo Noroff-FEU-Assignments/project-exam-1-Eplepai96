@@ -44,6 +44,24 @@ a {
     color: inherit;
 }
 
+
+
+.logo {
+    position: absolute;
+    width: auto;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.226);
+}
+
+.top-image {
+    max-height: 70vh;
+    object-fit: cover;
+}
+
+.top {
+    margin: 0px 1px;
+}
+
 /* Buttons */
 .read-more-btn {
     background-color: #285939;
@@ -123,6 +141,7 @@ nav li:hover {
 footer {
     background-color: var(--main-color);
     padding: 20px;
+    margin-top: 50px;
 }
 
 footer p, footer a {
@@ -145,7 +164,7 @@ footer p, footer a {
     margin: 20px 0px 10px 10px;
 }
 
-.search-button {
+.search-button, .search-button-phone {
     background-color: var(--main-color);
     color:var(--secondary-color);
     border: none;
@@ -155,7 +174,7 @@ footer p, footer a {
     margin: 10px;
 }
 
-.searchbar {
+.searchbar, .searchbar-phone {
     padding-top: 10px;
 }
 
@@ -167,11 +186,11 @@ footer p, footer a {
     display: flex;
     align-items: center;
     background-color: var(--tertiary-color);
+    max-width: 850px;
 }
 
 .carousel-container {
     max-width: 800px;
-    margin: auto;
     display: flex;
     overflow: auto;
     scroll-behavior: smooth;
@@ -275,8 +294,19 @@ footer p, footer a {
     background-color: var(--tertiary-color);
 }
 
-/* About page */
+.send-button {
+    background-color: var(--main-color);
+    color: var(--secondary-color);
+    border: 1px solid black;
+    border-radius: 2px;
+    padding: 5px 10px ;
+}
 
+/* About page */
+.about-text {
+    display: block;
+    
+}
 
 
 
@@ -315,9 +345,9 @@ footer a {
     display: block;
 }
 
-.intro-text p {
-    max-width: 400px;
-    float: right;
+.intro-paragraphs {
+    display: flex;
+    max-width: 800px;
 }
 
 /* Posts page */
@@ -333,3 +363,14 @@ footer a {
 }
 }
 
+
+@media screen and (min-width: 900px){
+    .all-page-content {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .center-content {
+        display: block;
+    }
+}

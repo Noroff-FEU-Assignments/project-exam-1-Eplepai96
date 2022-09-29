@@ -1,4 +1,5 @@
 const postContainer = document.querySelector(".post-container");
+const imageContainer = document.querySelector(".specific-post-image")
 
 const queryString = document.location.search;
 
@@ -27,9 +28,12 @@ async function fetchPost() {
         function createHtml() {
             postContainer.innerHTML += `<div>
                                         <h1>${post.title.rendered}</h1>
-                                        <img class="specific-post-image" src="${post._embedded?.["wp:featuredmedia"]?.[0].source_url}" />
+                                                                              
                                         <p class="post-content">${post.content.rendered}</p>                               
                                         </div>`
+
+
+            imageContainer.innerHTML += `<img class="" src="${post._embedded?.["wp:featuredmedia"]?.[0].source_url}" />` 
                                     }
         
         createHtml(post);
@@ -42,11 +46,11 @@ async function fetchPost() {
 
 fetchPost(url);
 
-const postImage = document.querySelector("specific-post-image")
+const postImage = document.querySelector(".specific-post-image")
 
 function enlargeImage(){
     console.log(23)
-    document.postImage.style.color = "blue";
+    postImage.requestFullscreen()
 }
 
-postImage.addEventListener("click", enlargeImage);
+imageContainer.addEventListener("click", enlargeImage);

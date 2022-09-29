@@ -35,26 +35,30 @@
         </nav>
     </header>
 
-    <h1>Alle poster</h1>
+    <div class="all-page-content">
+        <div class="center-content">
+            <h1>Alle poster</h1>
 
-    <div class="phone-search">
-        <div class="searchfield">
-            <input class="searchbar" type="search" placeholder="Søk i poster..">
-            <button class="search-button" type="submit"><span class="material-symbols-outlined">
-                search
-                </span>
-            </button>
+            <div class="phone-search">
+                <div class="searchfield">
+                    <input class="searchbar-phone" type="search" placeholder="Søk i poster..">
+                    <button class="search-button-phone" type="submit"><span class="material-symbols-outlined">
+                        search
+                        </span>
+                    </button>
+                </div>
+            </div>
+
+            <select name="dropdown" id="dropdown">
+                <option value="all-posts">Alle poster</option>
+                <option value="popular">Popularitet</option>
+                <option value="recent">Nylig</option> 
+            </select>
+
+            <div class="posts-container"></div>
+            <p class="see-more">Se fler..</p>
         </div>
     </div>
-
-    <select name="dropdown" id="dropdown">
-        <option value="all-posts">Alle poster</option>
-        <option value="popular">Popularitet</option>
-        <option value="recent">Nylig</option> 
-    </select>
-
-    <div class="posts-container"></div>
-    <p class="see-more">Se fler..</p>
 
     <footer>
         <a href="contact.html">Kontakt oss</a>

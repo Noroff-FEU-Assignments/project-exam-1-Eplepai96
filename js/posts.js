@@ -8,7 +8,7 @@ const url = "http://soppsankingno.local/wp-json/wp/v2/posts?page=1&_embed";
 
 /* Display posts */
 
-async function getPosts() {
+async function getPosts(url) {
     const response = await fetch(url);
     const posts = await response.json();
 
@@ -25,36 +25,38 @@ async function getPosts() {
 getPosts(url)
 
 
-/* See more function */
-
- function showAllPosts() {
-   const newUrl = baseUrl + "&per_page=50";
-   postsContainer.innerHTML = "";
-   getPosts(newUrl);
-
-   console.log(newUrl);
-
-   seeMoreButton.innerHTML ="";
-   
-}
-
-seeMoreButton.addEventListener("click", showAllPosts);
-
-
-
 /* Search */
 
 const searchButton = document.querySelector(".search-button");
+const searchBar = document.querySelector(".searchbar");
 
 searchButton.onclick = function() {
   
-  const searchBar = document.querySelector(".searchbar").value;
-  console.log(searchBar);
-  const searchUrl = baseUrl + `&search=${searchBar}`;
+  console.log(searchBar.value);
+  const searchUrl = baseUrl + `&_embed&search=${searchBar.value}`;
 
-  console.log(searchUrl)
+  console.log(searchUrl);
 
-  seeMoreButton.innerHTML =""
+  postsContainer.innerHTML = ""
+
   getPosts(searchUrl);
 }
 
+// searchButton.addEventListener("click", searchPosts)
+
+
+/* See more function */
+
+function showAllPosts() {
+  const newUrl = baseUrl + "&per_page=50&_embed";
+  
+  console.log(newUrl);
+
+  seeMoreButton.innerHTML ="";
+  postsContainer.innerHTML = ""
+
+  getPosts(newUrl);
+  
+}
+
+seeMoreButton.addEventListener("click", showAllPosts);

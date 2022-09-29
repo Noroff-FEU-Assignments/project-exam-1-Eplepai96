@@ -12,8 +12,8 @@
 </head>
 <body>
 
-    <div>
-        <img src="images/Asset 1.png" alt="logo">
+    <div class="top">
+        <img src="images/Asset 1.png" alt="logo" class="logo">
         <img src="images/Project exam main image.jpg" alt="forskjellige typer sopp" class="top-image">
     </div>
     
@@ -35,31 +35,41 @@
         </nav>
     </header>
     
-    <div class="intro-text">
-        <h1>Velkommen!</h1>
-        <p>Velkommen til min blogg om norsk sopp. Her kan du lese kort om flere typer sopp, samt annen informasjon om sopp du kanskje finner interessant. </p>
-        <p>Bloggen er ment for deg som ønsker å lære, men er ikke en soppkontroll. Sopp som skal spises skal alltid kontrolleres av soppsakkyndig.</p>
-    </div>
+    <div class="all-page-content">
+        <div class="center-content">
+            <div class="intro-text">
+                <h1>Velkommen!</h1>
+                <div class="intro-paragraphs">
+                    <p>Velkommen til min blogg om norsk sopp. Her kan du lese kort om flere typer sopp, samt annen informasjon om sopp du kanskje finner interessant. </p>
+                    <p>Bloggen er ment for deg som ønsker å lære, men er ikke en soppkontroll. Sopp som skal spises skal alltid kontrolleres av soppsakkyndig.</p>
+                </div>
+                
+            </div>
+            
+            <div class="phone-search">
+                <div class="searchfield">
+                    <input class="searchbar" type="text" placeholder="Søk i poster..">
+                    <button type="submit" class="search-button"><span class="material-symbols-outlined">
+                        search
+                        </span></button>
+            </div>
+        </div>
     
-    <div class="searchfield">
-        <input class="searchbar" type="text" placeholder="Søk i poster..">
-        <button type="submit" class="search-button"><span class="material-symbols-outlined">
-            search
-            </span></button>
+
+            <h2 class="h2-home">Nyeste innlegg</h2>
+            <div class="posts">
+                
+                <span class="material-symbols-outlined" id="previous-btn">
+                    navigate_next
+                    </span>
+                <div class="carousel-container"></div>
+                <span class="material-symbols-outlined" id="next-btn">
+                    navigate_next
+                    </span>
+            </div>
+        </div>
     </div>
 
-    <h2 class="h2-home">Nyeste innlegg</h2>
-    <div class="posts">
-        
-        <span class="material-symbols-outlined" id="previous-btn">
-            navigate_next
-            </span>
-        <div class="carousel-container"></div>
-        <span class="material-symbols-outlined" id="next-btn">
-            navigate_next
-            </span>
-    </div>
-    
     <footer>
         <a href="contact.html">Kontakt oss</a>
         <p>Følg oss</p>
