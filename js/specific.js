@@ -40,7 +40,7 @@ async function fetchPost() {
         createHtml(post);
     }
     catch(error) {
-        console.log(error);
+        console.log(error)
     }
     
 }
@@ -51,12 +51,17 @@ fetchPost(url);
 /* Make featured image larger */
 
 const postImage = document.querySelector(".specific-post-image")
-const modalImage = document.querySelector(".modal-image-container")
+const modalContainer = document.querySelector(".modal-image-container")
+const caption = document.querySelector(".caption")
+const modalImage = document.queryselector("#modal-image")
 
 postImage.addEventListener("click", function () {
-    this.style.width = "700px";
-    console.log("this")
-  })
+    modalContainer.style.display = "flex";
+    modalImage.src = this.src;
+    modalImage.alt = this.alt;
+
+    caption.innerHTML = this.alt;
+  });
 
 // function enlargeImage(){
 //     console.log(23)
