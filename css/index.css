@@ -326,14 +326,7 @@ footer a:hover {
     padding: 5px 10px ;
 }
 
-.contact-paragraphs, .about-paragraphs {
-    display: flex; 
-    justify-content: space-between;
-}
-.contact-paragraphs p, .about-paragraphs p {
-    margin-right: 10px;
-    flex-basis: 500px;
-} 
+
 
 /* About page */
 .about-text {
@@ -382,6 +375,16 @@ footer a {
     display: flex;
     max-width: 800px;
 }
+
+/* Contact page */ 
+.contact-paragraphs, .about-paragraphs {
+    display: flex; 
+    justify-content: space-between;
+}
+.contact-paragraphs p, .about-paragraphs p {
+    margin-right: 10px;
+    flex-basis: 500px;
+} 
 
 /* Posts page */
 .phone-search {
