@@ -37,6 +37,7 @@ searchButton.onclick = function() {
 
   console.log(searchUrl);
 
+  seeMoreButton.innerHTML = ""
   postsContainer.innerHTML = ""
 
   getPosts(searchUrl);
