@@ -2,9 +2,9 @@ const postsContainer = document.querySelector('.posts-container');
 
 const seeMoreButton = document.querySelector(".see-more")
 
-const baseUrl = "http://soppsankingno.local/wp-json/wp/v2/posts?"
+const baseUrl = "http://eplepaisolutions.no/wp-json/wp/v2/posts?"
 
-const url = "http://soppsankingno.local/wp-json/wp/v2/posts?page=1&_embed";
+const url = "http://eplepaisolutions.no/wp-json/wp/v2/posts?page=1&_embed";
 
 /* Display posts */
 

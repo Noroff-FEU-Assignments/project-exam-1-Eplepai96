@@ -1,8 +1,8 @@
 const carouselContainer = document.querySelector('.carousel-container');
 
-const baseUrl = "http://soppsankingno.local/wp-json/wp/v2/posts?page=1&_embed"
+const baseUrl = "http://eplepaisolutions.no/wp-json/wp/v2/posts?page=1&_embed"
 
-const url = "http://soppsankingno.local/wp-json/wp/v2/posts?page=1&_embed";
+const url = "http://eplepaisolutions.no/wp-json/wp/v2/posts?page=1&_embed";
 
 
 /* Fetch url */
@@ -39,6 +39,23 @@ async function getPosts() {
 }
 
 getPosts(baseUrl);
+
+/* Search */
+
+// const searchButton = document.querySelector(".search-button");
+// const searchBar = document.querySelector(".searchbar");
+
+// searchButton.onclick = function() {
+  
+//   console.log(searchBar.value);
+//   const searchUrl = "http://eplepaisolutions.no/wp-json/wp/v2/posts?" + `&_embed&search=${searchBar.value}`;
+
+//   console.log(searchUrl);
+
+//   postsContainer.innerHTML = ""
+
+//   getPosts(searchUrl);
+// }
 
 
 

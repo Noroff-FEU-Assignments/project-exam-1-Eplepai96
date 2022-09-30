@@ -1,5 +1,5 @@
 const postContainer = document.querySelector(".post-container");
-const imageContainer = document.querySelector(".specific-post-image")
+const imageContainer = document.querySelector(".specific-post-image-container")
 
 const queryString = document.location.search;
 
@@ -10,12 +10,14 @@ const id = params.get("id");
 
 console.log(id);
 
-const baseUrl = "http://soppsankingno.local/wp-json/wp/v2/posts/"
+const baseUrl = "http://eplepaisolutions.no/wp-json/wp/v2/posts/"
 
-const url = "http://soppsankingno.local/wp-json/wp/v2/posts/" + id + "?_embed";
+const url = "http://eplepaisolutions.no/wp-json/wp/v2/posts/" + id + "?_embed";
 
 
 console.log(url);
+
+/* Display specific content */
 
 async function fetchPost() {
 
@@ -27,13 +29,12 @@ async function fetchPost() {
       
         function createHtml() {
             postContainer.innerHTML += `<div>
-                                        <h1>${post.title.rendered}</h1>
-                                                                              
+                                        <h1>${post.title.rendered}</h1>                                                                             
                                         <p class="post-content">${post.content.rendered}</p>                               
                                         </div>`
 
 
-            imageContainer.innerHTML += `<img class="" src="${post._embedded?.["wp:featuredmedia"]?.[0].source_url}" />` 
+            imageContainer.innerHTML += `<img class="specific-post-image" src="${post._embedded?.["wp:featuredmedia"]?.[0].source_url}" />` 
                                     }
         
         createHtml(post);
@@ -46,11 +47,20 @@ async function fetchPost() {
 
 fetchPost(url);
 
+
+/* Make featured image larger */
+
 const postImage = document.querySelector(".specific-post-image")
+const modalImage = document.querySelector(".modal-image-container")
 
-function enlargeImage(){
-    console.log(23)
-    postImage.requestFullscreen()
-}
+postImage.addEventListener("click", function () {
+    this.style.width = "700px";
+    console.log("this")
+  })
 
-imageContainer.addEventListener("click", enlargeImage);
+// function enlargeImage(){
+//     console.log(23)
+//     postImage.requestFullscreen()
+// }
+
+// imageContainer.addEventListener("click", enlargeImage);
