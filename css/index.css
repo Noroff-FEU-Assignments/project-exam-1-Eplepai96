@@ -108,11 +108,14 @@ nav ul {
     display: flex;
     color: rgba(0, 0, 0, 0.623);
     font-weight: 800; 
+    
 }
 
 nav li {
     padding: 10px 5px;
-    
+    display: block;
+    width: 100%;
+    text-align: center;
 }
 
 
@@ -341,6 +344,7 @@ nav li:nth-child(4) {
 
 nav li {
     flex-basis: 150px;
+    text-align: left;
 }
 
 nav .searchfield {
