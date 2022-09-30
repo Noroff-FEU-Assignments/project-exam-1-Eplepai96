@@ -10,9 +10,9 @@ const id = params.get("id");
 
 console.log(id);
 
-const baseUrl = "http://eplepaisolutions.no/wp-json/wp/v2/posts/"
+const baseUrl = "https://eplepaisolutions.no/wp-json/wp/v2/posts/"
 
-const url = "http://eplepaisolutions.no/wp-json/wp/v2/posts/" + id + "?_embed";
+const url = "https://eplepaisolutions.no/wp-json/wp/v2/posts/" + id + "?_embed";
 
 
 console.log(url);
