@@ -12,7 +12,7 @@
 <body>
 
     <div>
-        <a href="index.html"><img src="images/Asset 1.png" alt="logo"></a>
+        <a href="index.html"><img src="images/Asset 1.png" alt="logo" class="logo"></a>
         <img src="images/Project exam main image.jpg" alt="forskjellige typer sopp" class="top-image">
     </div>
     
@@ -40,31 +40,33 @@
                     <h1>Kontakt oss</h1>
                     <div class="contact-form">
                         <form>
-                            <div>
-                                <label>
-                                    <p>Navn</p> 
-                                    <input name="name" id="name" />
-                                </label>
-                                <div class="error" id="name-error">Navn må være minst 5 karakterer</div>
-                            </div>
+                            
+                                <div>
+                                    <label>
+                                        <p>Navn</p> 
+                                        <input name="name" id="name" />
+                                    </label>
+                                    <div class="error" id="name-error">Navn må være minst 5 karakterer</div>
+                                </div>
+                    
+                                <div>
+                                    <label>
+                                        <p>Epost</p>
+                                        <input name="email" id="email" />
+                                    </label>
+                                    <div class="error" id="email-error">Ikke godkjent epost</div>
+                                </div>
+                    
+                                <div>
+                                    <label>
+                                        <p>Tema</p>
+                                        <input name="subject" id="subject" />
+                                    </label>
+                                    <div class="error" id="subject-error">Må være minst 15 karakterer</div>
+                                
+                            
                 
-                            <div>
-                                <label>
-                                    <p>Epost</p>
-                                    <input name="email" id="email" />
-                                </label>
-                                <div class="error" id="email-error">Ikke godkjent epost</div>
-                            </div>
-                
-                            <div>
-                                <label>
-                                    <p>Tema</p>
-                                    <input name="subject" id="subject" />
-                                </label>
-                                <div class="error" id="subject-error">Må være minst 15 karakterer</div>
-                            </div>
-                
-                            <div>
+                            
                                 <label>
                                     <p>Melding</p> 
                                     <textarea name="message" id="message" cols="30" rows="10"></textarea>
@@ -73,8 +75,9 @@
                             </div>
                 
                             <button class="send-button">Send</button>
+                        </div>
                         </form>
-                    </div>
+                    
 
                     <article class="contact-info">
                         <h2>Informasjon</h2>

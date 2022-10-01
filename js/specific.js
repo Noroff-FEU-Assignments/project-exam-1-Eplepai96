@@ -51,17 +51,29 @@ fetchPost(url);
 /* Make featured image larger */
 
 const postImage = document.querySelector(".specific-post-image")
-const modalContainer = document.querySelector(".modal-image-container")
-const caption = document.querySelector(".caption")
-const modalImage = document.queryselector("#modal-image")
 
-postImage.addEventListener("click", function () {
-    modalContainer.style.display = "flex";
-    modalImage.src = this.src;
-    modalImage.alt = this.alt;
+function enlargeImage() {
+    postImage.classList.toggle("enlarge-image")
+    console.log(231)
+}
 
-    caption.innerHTML = this.alt;
-  });
+postImage.addEventListener("click", enlargeImage)
+
+
+// const modalContainer = document.querySelector(".modal-image-container")
+// const caption = document.querySelector(".caption")
+// const modalImage = document.queryselector("#modal-image")
+
+// postImage.addEventListener("click", function () {
+//     modalContainer.style.display = "flex";
+//     modalImage.src = this.src;
+//     modalImage.alt = this.alt;
+
+//     caption.innerHTML = this.alt;
+//   });
+
+
+
 
 // function enlargeImage(){
 //     console.log(23)
