@@ -11,7 +11,7 @@ const id = params.get("id");
 
 console.log(id);
 
-const baseUrl = "https://eplepaisolutions.no/wp-json/wp/v2/posts/"
+const baseUrl = "https://eplepaisolutions.no/wp-json/wp/v2/posts/";
 
 const url = "https://eplepaisolutions.no/wp-json/wp/v2/posts/" + id + "?_embed";
 
@@ -19,7 +19,7 @@ const url = "https://eplepaisolutions.no/wp-json/wp/v2/posts/" + id + "?_embed";
 console.log(url);
 
 
-/* Display specific content */
+/* Display specific content ant change title */
 
 async function fetchPost() {
 
@@ -33,10 +33,13 @@ async function fetchPost() {
         function createHtml() {
             postContainer.innerHTML += `<div>
                                         <h1>${post.title.rendered}</h1>                                                                             
-                                        <p class="post-content">${post.content.rendered}</p>                               
+                                        <p class="post-content">${post.content.rendered}</p>                              
                                         </div>`
 
             imageContainer.innerHTML += `<img class="specific-post-image" src="${post._embedded?.["wp:featuredmedia"]?.[0].source_url}" />`
+                                        // <p class="alt-text" src="${post._embedded?.["wp:featuredmedia"]?.alt_text?.srcset}"</p>
+                                        // <p class="caption" src="${post._embedded?.["wp:featuredmedia"]?.caption?.rendered.srcset}"</p>
+                                        
             
             popupImageContainer.innerHTML += `<img class="specific-popup-image" src="${post._embedded?.["wp:featuredmedia"]?.[0].source_url}" />`  
                                     }
@@ -50,7 +53,7 @@ async function fetchPost() {
     }
     
     finally {
-        onLoad()
+        onLoad();
     }
 }
 
@@ -63,44 +66,13 @@ const postImage = document.querySelector(".specific-post-image-container");
 const popupImageContainer = document.querySelector(".popup-image");
 
 postImage.onclick = function() {
-    popupImageContainer.style.display = ("block")
-    postImage.style.display = ("none")
+    popupImageContainer.style.display = ("block");
+    postImage.style.display = ("none");
 }
 
 popupImageContainer.onclick = function() {
-    popupImageContainer.style.display = ("none")
-    postImage.style.display = ("block")
-    console.log("hidden")
+    popupImageContainer.style.display = ("none");
+    postImage.style.display = ("block");
+    console.log("hidden");
 }
 
-// const postImage = document.querySelector(".specific-post-image-container")
-
-// function enlargeImage() {
-//     this.classList.toggle("enlarge-image")
-//     console.log("hi")
-// }
-
-// postImage.addEventListener("click", enlargeImage)
-
-
-// const modalContainer = document.querySelector(".modal-image-container")
-// const caption = document.querySelector(".caption")
-// const modalImage = document.queryselector("#modal-image")
-
-// postImage.addEventListener("click", function () {
-//     modalContainer.style.display = "flex";
-//     modalImage.src = this.src;
-//     modalImage.alt = this.alt;
-
-//     caption.innerHTML = this.alt;
-//   });
-
-
-
-
-// function enlargeImage(){
-//     console.log(23)
-//     postImage.requestFullscreen()
-// }
-
-// imageContainer.addEventListener("click", enlargeImage);

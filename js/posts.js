@@ -1,9 +1,9 @@
 const postsContainer = document.querySelector('.posts-container');
-const contentContainer = document.querySelector('.posts-top')
+const contentContainer = document.querySelector('.posts-top');
 
-const seeMoreButton = document.querySelector(".see-more")
+const seeMoreButton = document.querySelector(".see-more");
 
-const baseUrl = "https://eplepaisolutions.no/wp-json/wp/v2/posts?"
+const baseUrl = "https://eplepaisolutions.no/wp-json/wp/v2/posts?";
 
 const url = "https://eplepaisolutions.no/wp-json/wp/v2/posts?page=1&_embed";
 
@@ -24,15 +24,15 @@ async function getPosts(url) {
     });
   }
     catch(error) {
-      contentContainer.innerHTML = displayError("Feil under henting av poster. Vennligst last inn siden på nytt.")
-      seeMoreButton.innerHTML = ""
+      contentContainer.innerHTML = displayError("Feil under henting av poster. Vennligst last inn siden på nytt.");
+      seeMoreButton.innerHTML = "";
     }
     finally{
-      onLoad()
+      onLoad();
     }
 }
 
-getPosts(url)
+getPosts(url);
 
 
 /* Search */
@@ -47,8 +47,8 @@ searchButton.onclick = function() {
 
   console.log(searchUrl);
 
-  seeMoreButton.innerHTML = ""
-  postsContainer.innerHTML = ""
+  seeMoreButton.innerHTML = "";
+  postsContainer.innerHTML = "";
 
   getPosts(searchUrl);
 }
@@ -64,7 +64,7 @@ function showAllPosts() {
   console.log(newUrl);
 
   seeMoreButton.innerHTML ="";
-  postsContainer.innerHTML = ""
+  postsContainer.innerHTML = "";
 
   getPosts(newUrl);
   

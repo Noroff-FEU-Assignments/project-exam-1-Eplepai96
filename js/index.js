@@ -1,7 +1,7 @@
 const carouselContainer = document.querySelector('.carousel-container');
-const postsContainer = document.querySelector(".posts")
+const postsContainer = document.querySelector(".posts");
 
-const baseUrl = "https://eplepaisolutions.no/wp-json/wp/v2/posts?page=1&_embed"
+const baseUrl = "https://eplepaisolutions.no/wp-json/wp/v2/posts?page=1&_embed";
 
 const url = "https://eplepaisolutions.no/wp-json/wp/v2/posts?page=1&_embed";
 
@@ -26,7 +26,7 @@ async function getPosts() {
   try {
     const response = await fetch(url);
     const posts = await response.json();
-    console.log(response.body)
+    console.log(response.body);
 
 
 
@@ -44,7 +44,7 @@ async function getPosts() {
     }
 
     finally {
-      onLoad()
+      onLoad();
     }
 }
 
@@ -86,5 +86,5 @@ function previousItems() {
   carouselContainer.scrollBy(-(length + gap), 0);
 }
 
-nextButton.addEventListener("click", nextItems)
-previousButton.addEventListener("click", previousItems)
+nextButton.addEventListener("click", nextItems);
+previousButton.addEventListener("click", previousItems);

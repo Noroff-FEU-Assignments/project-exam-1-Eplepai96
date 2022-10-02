@@ -1,7 +1,7 @@
-const searchButton = document.querySelector(".search-button");
-const searchField = document.querySelector(".searchbar");
+// const searchButton = document.querySelector(".search-button");
+// const searchField = document.querySelector(".searchbar");
 
-searchButton.onclick = function() {
-    console.log(searchField)
+// searchButton.onclick = function() {
+//     console.log(searchField)
 
-};
+// };

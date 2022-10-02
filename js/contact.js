@@ -41,7 +41,7 @@ const subjectError = document.querySelector("#subject-error");
 const messageError = document.querySelector("#message-error");
 
 function validateForm() {
-    event.preventDefault()
+    event.preventDefault();
 
     if (validateLength(customerName.value, 5)) {
         nameError.style.display = "none"
@@ -50,21 +50,21 @@ function validateForm() {
     }
 
     if (validateLength(message.value, 25)) {
-        messageError.style.display = "none"
+        messageError.style.display = "none";
     } else {
-        messageError.style.display = "block"
+        messageError.style.display = "block";
     }
 
     if (validateLength(subject.value, 15)) {
-        subjectError.style.display = "none"
+        subjectError.style.display = "none";
     } else {
-        subjectError.style.display = "block"
+        subjectError.style.display = "block";
     }
 
     if (validateEmail(email.value) && validateLength(email.value, 0)) {
-        emailError.style.display = "none"
+        emailError.style.display = "none";
     } else {
-        emailError.style.display = "block"
+        emailError.style.display = "block";
     }
 
 }
@@ -79,7 +79,7 @@ function displayMessage() {
                             <p>We'll be in touch</p>`
     }
     else(displayError('Vi hadde et problem'))
-}
+};
 
 
 
@@ -89,7 +89,7 @@ function validateLength(input, len) {
     } else {
         return false;
     }
-}
+};
 
 function validateEmail(email) {
     const regEx = /\S+@\S+\.\S+/;
