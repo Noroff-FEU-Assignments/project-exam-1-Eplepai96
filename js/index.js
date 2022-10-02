@@ -76,15 +76,15 @@ const previousButton = document.querySelector("#previous-btn");
 
 const gap = 780;
 
-let width = carouselContainer.offsetWidth;
+const length = carouselContainer.offsetWidth;
 
-function nextSlide() {
-  carouselContainer.scrollBy(width + gap, 0);
+function nextItems() {
+  carouselContainer.scrollBy(length + gap, 0);
 }
 
-function previousSlide() {
-  carouselContainer.scrollBy(-(width + gap), 0);
+function previousItems() {
+  carouselContainer.scrollBy(-(length + gap), 0);
 }
 
-nextButton.addEventListener("click", nextSlide)
-previousButton.addEventListener("click", previousSlide)
+nextButton.addEventListener("click", nextItems)
+previousButton.addEventListener("click", previousItems)
