@@ -1,5 +1,6 @@
 const postContainer = document.querySelector(".post-container");
-const imageContainer = document.querySelector(".specific-post-image-container")
+const imageContainer = document.querySelector(".specific-post-image-container");
+const body = document.querySelector("body");
 
 const queryString = document.location.search;
 
@@ -33,16 +34,20 @@ async function fetchPost() {
                                         <p class="post-content">${post.content.rendered}</p>                               
                                         </div>`
 
-
-            imageContainer.innerHTML += `<img class="specific-post-image" src="${post._embedded?.["wp:featuredmedia"]?.[0].source_url}" />` 
+            imageContainer.innerHTML += `<img class="specific-post-image" src="${post._embedded?.["wp:featuredmedia"]?.[0].source_url}" />`
+            
+            popupImageContainer.innerHTML += `<img class="specific-popup-image" src="${post._embedded?.["wp:featuredmedia"]?.[0].source_url}" />`  
                                     }
         
         createHtml(post);
     }
     catch(error) {
-        console.log(error)
+        postContainer.innerHTML = displayError("Feil under henting av posten. Vennligst gå tilbake til forrige side." , displayError);
     }
     
+    finally {
+        onLoad()
+    }
 }
 
 fetchPost(url);
@@ -50,14 +55,28 @@ fetchPost(url);
 
 /* Make featured image larger */
 
-const postImage = document.querySelector(".specific-post-image")
+const postImage = document.querySelector(".specific-post-image-container");
+const popupImageContainer = document.querySelector(".popup-image");
 
-function enlargeImage() {
-    postImage.classList.toggle("enlarge-image")
-    console.log(231)
+postImage.onclick = function() {
+    popupImageContainer.style.display = ("block")
+    postImage.style.display = ("none")
 }
 
-postImage.addEventListener("click", enlargeImage)
+popupImageContainer.onclick = function() {
+    popupImageContainer.style.display = ("none")
+    postImage.style.display = ("block")
+    console.log("hidden")
+}
+
+// const postImage = document.querySelector(".specific-post-image-container")
+
+// function enlargeImage() {
+//     this.classList.toggle("enlarge-image")
+//     console.log("hi")
+// }
+
+// postImage.addEventListener("click", enlargeImage)
 
 
 // const modalContainer = document.querySelector(".modal-image-container")

@@ -1,4 +1,5 @@
 const postsContainer = document.querySelector('.posts-container');
+const contentContainer = document.querySelector('.posts-top')
 
 const seeMoreButton = document.querySelector(".see-more")
 
@@ -9,6 +10,7 @@ const url = "https://eplepaisolutions.no/wp-json/wp/v2/posts?page=1&_embed";
 /* Display posts */
 
 async function getPosts(url) {
+  try{
     const response = await fetch(url);
     const posts = await response.json();
 
@@ -20,6 +22,14 @@ async function getPosts(url) {
                                 </div>`;
 
     });
+  }
+    catch(error) {
+      contentContainer.innerHTML = displayError("Feil under henting av poster. Vennligst last inn siden på nytt.")
+      seeMoreButton.innerHTML = ""
+    }
+    finally{
+      onLoad()
+    }
 }
 
 getPosts(url)

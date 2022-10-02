@@ -1,4 +1,5 @@
 const carouselContainer = document.querySelector('.carousel-container');
+const postsContainer = document.querySelector(".posts")
 
 const baseUrl = "https://eplepaisolutions.no/wp-json/wp/v2/posts?page=1&_embed"
 
@@ -22,6 +23,7 @@ fetchPosts()
 /* Create posts */
 
 async function getPosts() {
+  try {
     const response = await fetch(url);
     const posts = await response.json();
     console.log(response.body)
@@ -36,6 +38,14 @@ async function getPosts() {
                                 </div>`;
 
     });
+  }
+    catch(error) {
+      postsContainer.innerHTML = displayError("Feil under henting av poster. Vennligst last inn siden på nytt.");
+    }
+
+    finally {
+      onLoad()
+    }
 }
 
 getPosts(baseUrl);
