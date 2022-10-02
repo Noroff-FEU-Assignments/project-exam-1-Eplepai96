@@ -18,6 +18,7 @@ const url = "https://eplepaisolutions.no/wp-json/wp/v2/posts/" + id + "?_embed";
 
 console.log(url);
 
+
 /* Display specific content */
 
 async function fetchPost() {
@@ -27,6 +28,7 @@ async function fetchPost() {
         const post = await response.json();
 
         console.log(post);
+        document.title = document.title + " - " + `${post.title.rendered}`;
       
         function createHtml() {
             postContainer.innerHTML += `<div>
@@ -40,6 +42,8 @@ async function fetchPost() {
                                     }
         
         createHtml(post);
+
+       
     }
     catch(error) {
         postContainer.innerHTML = displayError("Feil under henting av posten. Vennligst gå tilbake til forrige side." , displayError);
