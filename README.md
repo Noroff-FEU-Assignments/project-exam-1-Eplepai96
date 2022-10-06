@@ -1,3 +1,37 @@
+# Project-exam-Repository
+1st year exam at Noroff
+
+# Norwegian blog about mushrooms
+image
+Blog about wild mushrooms commonly found in Norway
+
+## Description
+Simple blog about Norwegian mushrooms, made during my first exam at Noroff.  
+
+* Noroff
+* Mushroom blog
+
+## Built With
+* HTML
+* CSS
+* JavaScript
+
+## Getting Started
+#### Installing
+Clone the repo and you should be good to go: 
+https://github.com/Noroff-FEU-Assignments/cross-course-project-Eplepai96.git
+
+### Contributing
+If you want to contribute, plase open a pull request so the code can be reviewed.
+
+### Contact
+To be added
+
+### Acknowledgments
+Noroff School of Technology and Digital Media, 
+Vi som liker sopp (Facebook group): https://www.facebook.com/groups/soppgruppen/?ref=share
+
+
 
 
 <!-- ## Project Exam 1
