@@ -19,7 +19,7 @@ Simple blog about Norwegian mushrooms, made during my first exam at Noroff.
 ## Getting Started
 #### Installing
 Clone the repo and you should be good to go: 
-https://github.com/Noroff-FEU-Assignments/cross-course-project-Eplepai96.git
+https://github.com/Noroff-FEU-Assignments/project-exam-1.git
 
 ### Contributing
 If you want to contribute, plase open a pull request so the code can be reviewed.
