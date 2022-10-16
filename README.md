@@ -2,7 +2,8 @@
 1st year exam at Noroff
 
 # Norwegian blog about mushrooms
-image
+image![Soppsanking skjermbilde](https://user-images.githubusercontent.com/95239043/196054281-58344773-9873-45c5-b670-871a751bc63b.png)
+
 Blog about wild mushrooms commonly found in Norway
 
 ## Description
@@ -22,7 +23,7 @@ Clone the repo and you should be good to go:
 https://github.com/Noroff-FEU-Assignments/project-exam-1-Eplepai96.git
 
 ### Contributing
-If you want to contribute, plase open a pull request so the code can be reviewed.
+If you want to contribute, please open a pull request so the code can be reviewed.
 
 ### Contact
 To be added
