@@ -2,7 +2,7 @@
 1st year exam at Noroff
 
 # Norwegian blog about mushrooms
-image![Soppsanking skjermbilde](https://user-images.githubusercontent.com/95239043/196054281-58344773-9873-45c5-b670-871a751bc63b.png)
+![Soppsanking skjermbilde](https://user-images.githubusercontent.com/95239043/196054281-58344773-9873-45c5-b670-871a751bc63b.png)
 
 Blog about wild mushrooms commonly found in Norway
 
